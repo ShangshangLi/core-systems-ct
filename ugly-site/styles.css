@@ -1,0 +1,57 @@
+h1{
+    color: rgb(163,106,32);
+    font-family: futura-pt, Fantasy, Futura, Helvetica, Arial, sans-serif;
+    font-size: 100px;
+    font-style:oblique;
+    font-weight:1000px;
+    text-align: center;
+    letter-spacing: 10mm;
+}
+
+p{
+    position: relative;
+    left: 34%;
+    background-color: mintcream;
+    box-shadow: mistyrose 5px 5px;
+    margin-right: 64%;
+    color: burlywood;
+    font-family: Futura, Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+    word-spacing: 10mm;
+}
+
+li{ 
+    position: relative;
+    left: 400px;
+    font-family: futura-pt;
+    color: sienna;
+    list-style-type: square;
+    margin-left: 5%;
+}
+
+body{
+    background-color: seashell;
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@font-face {
+    font-family: futura-pt,sans-serif;
+    font-style: normal;
+    src: url("https://use.typekit.net/mne0dwl.css");
+  }
+
+img{
+    position: relative;
+    top: 10px;
+    left: 43%;
+    animation-name: anime;
+    animation-duration: 5s;
+}
+
+@keyframes anime {
+    from {left: 43%}
+    to {left: 50%;}
+  }
