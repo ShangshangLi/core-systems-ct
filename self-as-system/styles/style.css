@@ -1,0 +1,124 @@
+h1{
+    font-family: futura-pt;
+    position: relative;
+    top: 30vh;
+    text-align: center;
+}
+h1:hover{
+    font-size:40px;
+}
+
+h3{
+    font-family: futura-pt;
+    position: relative;
+    top: 30vh;
+    text-align: center;
+}
+h3:hover{
+    font-size:25px;
+}
+
+p{
+    font-family: futura-pt;
+    position: relative;
+    text-align: center;
+    margin-right:20%;
+    margin-left:20%;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bubble{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.5;
+}
+
+#ir{
+    background-color:seagreen;
+    width: 46vw;
+    height: 46vw;
+    position:absolute;
+    top: -20vh;
+    left: -10vw;
+    font-size: 5vw;
+}
+
+#irT{
+    top:25%;
+}
+
+#g{
+    background-color:steelblue;
+    width: 27vw;
+    height: 27vw;
+    position:relative;
+    top: 30vh;
+    left: 20vw;
+    font-size: 4vw;
+}
+
+#gT{
+    top:40%;
+}
+
+#s{
+    background-color:turquoise;
+    width: 15vw;
+    height: 15vw;
+    position:relative;
+    top: -50vh;
+    left: 80vw;
+    font-size: 3vw;
+}
+
+#sT{
+    top:35%;
+}
+
+#o{
+    background-color:gold;
+    width: 12vw;
+    height: 12vw;
+    position:relative;
+    top: -40vh;
+    left: 60vw;
+    font-size:2vw;
+}
+
+#oT{
+    top:40%;
+}
+
+#title {
+    cursor:pointer;
+}
+#title:hover {
+    color:palevioletred;
+}
+  
+#date {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#date p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#date.show {
+    opacity: 1;
+}

@@ -1,0 +1,50 @@
+h1{
+    font-family: futura-pt;
+    position: relative;
+    top: 45vh;
+    text-align: center;
+}
+
+h1 a{
+    color:black;
+}
+
+h1:hover{
+    text-shadow:orange 3px 3px;
+}
+    
+p{
+    font-family: futura-pt;
+    position: relative;
+    text-align: center;
+    margin-right:20%;
+    margin-left:20%;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bubble{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.5;
+}
+
+#hp{
+    background-color:gold;
+    width: 100vw;
+    height: 100vw;
+    position:absolute;
+    top: 0vh;
+    left: 0vw;
+    font-size: 10vw;
+}
+
+#hpT{
+    top:20%;
+}
+
