@@ -1,0 +1,40 @@
+#safe-box-cover:hover rect{
+    opacity:0;
+}
+
+#safe-box-cover:hover path{
+    opacity:0;
+}
+
+#safe-box-cover:hover polygon{
+    opacity:0;
+}
+
+#safe-box-cover {
+    cursor:pointer;
+}
+
+#safe-box-cover:hover {
+    color:palevioletred;
+}
+
+#budget {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#budget p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#budget.show {
+    opacity: 1;
+}

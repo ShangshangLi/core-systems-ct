@@ -1,9 +1,10 @@
-#door :hover{
-    width: 120px;
+#door:hover path{
+    fill:lightgray;
 }
-#doornob :hover{
-    color: black;
+#door path{
+    transition: fill 0.3s ease-in-out;
 }
+
 h1{
     color: white;
     text-shadow: #ff7bac 2px 2px;
