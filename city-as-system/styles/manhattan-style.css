@@ -1,3 +1,19 @@
+#month-left{
+    opacity:0;
+}
+
+#month-right{
+    opacity:0;
+}
+
+#year-left{
+    opacity:0;
+}
+
+#year-right{
+    opacity:0;
+}
+
 #safe-box-cover:hover rect{
     opacity:0;
 }
