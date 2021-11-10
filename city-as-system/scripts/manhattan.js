@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 //to get manhattan medianAskingRent data;
 let currentBorough = 'Manhattan';
-// let currentDate = '2021-08';
+
 function getCurrentData(){
   let row = budgetData.filter(d=> {
     return d.Borough == currentBorough;
