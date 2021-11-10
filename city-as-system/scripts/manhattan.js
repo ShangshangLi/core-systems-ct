@@ -3,15 +3,6 @@ let budgetData;
 let currentYear = 2021;
 let currentMonth = 8;
 let currentDate;
-// currentDate = currentYear+'-'+'0'+currentMonth;
-if (currentMonth>=1&&currentMonth<=9){
-  currentDate = currentYear+'-'+'0'+currentMonth;
-  console.log(currentDate);
-}
-else if (currentMonth>=10&&currentMonth<=12){
-  currentDate = currentYear+'-'+currentMonth;
-  console.log(currentDate);
-}
 
 //code for arrows of calendar;
 //month;
@@ -72,11 +63,15 @@ function changeMonthLeft(amount){
   if (currentMonth>=1&&currentMonth<=9){
     month.innerHTML = '0' + currentMonth;
     console.log(currentMonth);
+    currentDate = currentYear+'-'+'0'+currentMonth;
+    console.log(currentDate);
   }
   else if (currentMonth>=10&&currentMonth<=12){
     month.innerHTML = '1'+currentMonth%10;
     console.log(currentMonth);
     console.log("Oct-Dec");
+    currentDate = currentYear+'-'+currentMonth;
+    console.log(currentDate);
   }
 }
 
