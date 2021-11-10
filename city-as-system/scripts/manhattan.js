@@ -80,18 +80,15 @@ const month = document.querySelector('#month text');
 console.log(month);
 let currentMonth = 1;
 function changeMonth(amount){
-  let minMonth = 0; 
-  let maxMonth = 12;
   currentMonth = currentMonth + amount;
-  if (1<=currentMonth<10){
-    //const monthText = month.querySelector('p');
+  if (currentMonth>=1&&currentMonth<=9){
     month.innerHTML = '0' + currentMonth;
     console.log(currentMonth);
   }
-  else if (10<=currentMonth<=12){
-    const monthText = month.querySelector('p');
-    monthText.innerText = '1'+currentMonth%10;
+  else if (currentMonth>=10&&currentMonth<=12){
+    month.innerHTML = '1'+currentMonth%10;
     console.log(currentMonth);
+    console.log("Oct-Dec");
   }
 }
 
@@ -99,6 +96,21 @@ document.getElementById("month-right").onclick = function(){
   changeMonth(1);
 }
 
-//click on button > changeDate(1)
+// const month = document.querySelector('#month text');
+// let currentMonth = 1;
+function changeMonthLeft(amount){
+  currentMonth = currentMonth - amount;
+  if (currentMonth>=1&&currentMonth<=9){
+    month.innerHTML = '0' + currentMonth;
+    console.log(currentMonth);
+  }
+  else if (currentMonth>=10&&currentMonth<=12){
+    month.innerHTML = '1'+currentMonth%10;
+    console.log(currentMonth);
+    console.log("Oct-Dec");
+  }
+}
 
-//changeDate(1)
+document.getElementById("month-left").onclick = function(){
+  changeMonthLeft(1);
+}
