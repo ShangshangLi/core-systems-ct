@@ -96,8 +96,6 @@ document.getElementById("month-right").onclick = function(){
   changeMonth(1);
 }
 
-// const month = document.querySelector('#month text');
-// let currentMonth = 1;
 function changeMonthLeft(amount){
   currentMonth = currentMonth - amount;
   if (currentMonth>=1&&currentMonth<=9){
@@ -114,3 +112,44 @@ function changeMonthLeft(amount){
 document.getElementById("month-left").onclick = function(){
   changeMonthLeft(1);
 }
+
+//code for year of calendar
+const year = document.querySelector('#year text');
+console.log(year);
+let currentYear = 2021;
+
+function changeYearLeft(amount){
+  console.log(currentYear);
+  // currentYear = currentYear - amount;
+  // if (currentYear>=1&&currentYear<=9){
+    // year.innerHTML = currentYear;
+    // console.log(currentYear);
+  // }
+  // else if (currentYear>=10&&currentYear<=12){
+  //   year.innerHTML = currentYear;
+  //   console.log(currentYear);
+  //   console.log("Oct-Dec");
+  // }
+}
+
+document.getElementById("year-left").onclick = function(){
+  changeMonthLeft(1);
+}
+
+// function changeYearRight(amount){
+//   currentYear = currentYear + amount;
+//   if (currentYear>=1&&currentYear<=9){
+//     year.innerHTML = '0' + currentYear;
+//     console.log(currentYear);
+//   }
+//   else if (currentYear>=10&&currentYear<=12){
+//     year.innerHTML = '1'+currentYear%10;
+//     console.log(currentYear);
+//     console.log("Oct-Dec");
+//   }
+// }
+
+// document.getElementById("year-right").onclick = function(){
+//   changeYearRight(1);
+// }
+
