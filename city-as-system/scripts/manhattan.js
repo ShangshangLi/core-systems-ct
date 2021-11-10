@@ -3,9 +3,9 @@ let budgetData;
 
 document.addEventListener('DOMContentLoaded', async function () {
   async function loadMyData() {
-    let medainAskingRentData = await d3.csv('../assets/data/medianAskingRent.csv', d3.autoType);
-    console.log(medainAskingRentData);
-    budgetData=medainAskingRentData;
+    let medianAskingRentData = await d3.csv('../assets/data/medianAskingRent.csv', d3.autoType);
+    console.log(medianAskingRentData);
+    budgetData=medianAskingRentData;
   }  
   loadMyData();
   
@@ -33,12 +33,12 @@ title.addEventListener("mouseout", mouseOutHide);
 
 function mouseOverBudget(event) {
   let currentData = getCurrentData();
-    budget.style.top = event.clientY + 1 + 'px' ;
-    budget.style.left = event.clientX + 1 + 'px';
-    budget.classList.add('show');
-    const budgetText = budget.querySelector('p');
-    budgetText.innerText = "Budget:"+currentData;
-    //console.log(event.clientX, event.clientY);
+  budget.style.top = event.clientY + 1 + 'px' ;
+  budget.style.left = event.clientX + 1 + 'px';
+  budget.classList.add('show');
+  const budgetText = budget.querySelector('p');
+  budgetText.innerText = "Budget:"+currentData;
+  //console.log(event.clientX, event.clientY);
 }
 
 function mouseOutHide() {
