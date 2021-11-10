@@ -119,37 +119,26 @@ console.log(year);
 let currentYear = 2021;
 
 function changeYearLeft(amount){
-  console.log(currentYear);
-  // currentYear = currentYear - amount;
-  // if (currentYear>=1&&currentYear<=9){
-    // year.innerHTML = currentYear;
-    // console.log(currentYear);
-  // }
-  // else if (currentYear>=10&&currentYear<=12){
-  //   year.innerHTML = currentYear;
-  //   console.log(currentYear);
-  //   console.log("Oct-Dec");
-  // }
+  currentYear = currentYear - amount;
+  if (currentYear<=2021&&currentYear>=2012){
+    year.innerHTML = currentYear;
+    console.log(currentYear);
+  }
 }
 
 document.getElementById("year-left").onclick = function(){
-  changeMonthLeft(1);
+  changeYearLeft(1);
 }
 
-// function changeYearRight(amount){
-//   currentYear = currentYear + amount;
-//   if (currentYear>=1&&currentYear<=9){
-//     year.innerHTML = '0' + currentYear;
-//     console.log(currentYear);
-//   }
-//   else if (currentYear>=10&&currentYear<=12){
-//     year.innerHTML = '1'+currentYear%10;
-//     console.log(currentYear);
-//     console.log("Oct-Dec");
-//   }
-// }
+function changeYearRight(amount){
+  currentYear = currentYear + amount;
+  if (currentYear<=2021&&currentYear>=2012){
+    year.innerHTML = currentYear;
+    console.log(currentYear);
+  }
+}
 
-// document.getElementById("year-right").onclick = function(){
-//   changeYearRight(1);
-// }
+document.getElementById("year-right").onclick = function(){
+  changeYearRight(1);
+}
 
