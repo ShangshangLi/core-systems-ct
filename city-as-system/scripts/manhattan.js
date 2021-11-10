@@ -1,48 +1,16 @@
 //load medianAskingRent.csv data;
 let budgetData;
-
-document.addEventListener('DOMContentLoaded', async function () {
-  async function loadMyData() {
-    let medianAskingRentData = await d3.csv('./assets/data/medianAskingRent.csv', d3.autoType);
-    console.log(medianAskingRentData);
-    budgetData=medianAskingRentData;
-  }  
-  loadMyData();
-  
-});
-
-//to get manhattan data;
-let currentBorough = 'Manhattan';
-let currentDate = '2021-01';
-function getCurrentData(){
-  let row = budgetData.filter(d=> {
-    return d.Borough == currentBorough;
-  })
-  console.log(row);
-  currentData=row[0][currentDate];
-  console.log(currentData);
-  return currentData;
+let currentYear = 2021;
+let currentMonth = 8;
+let currentDate;
+// currentDate = currentYear+'-'+'0'+currentMonth;
+if (currentMonth>=1&&currentMonth<=9){
+  currentDate = currentYear+'-'+'0'+currentMonth;
+  console.log(currentDate);
 }
-
-//code for text of median asking rent = gold number;
-const title = document.querySelector("#safe-box-cover");
-const budget = document.querySelector('#budget');
-
-title.addEventListener("mouseover", mouseOverBudget);
-title.addEventListener("mouseout", mouseOutHide);
-
-function mouseOverBudget(event) {
-  let currentData = getCurrentData();
-  budget.style.top = event.clientY + 1 + 'px' ;
-  budget.style.left = event.clientX + 1 + 'px';
-  budget.classList.add('show');
-  const budgetText = budget.querySelector('p');
-  budgetText.innerText = "Budget:"+currentData;
-  //console.log(event.clientX, event.clientY);
-}
-
-function mouseOutHide() {
-    budget.classList.remove('show');
+else if (currentMonth>=10&&currentMonth<=12){
+  currentDate = currentYear+'-'+currentMonth;
+  console.log(currentDate);
 }
 
 //code for arrows of calendar;
@@ -78,8 +46,7 @@ document.getElementById("year").onclick = function(){
 //code for month of calendar
 const month = document.querySelector('#month text');
 console.log(month);
-let currentMonth = 1;
-function changeMonth(amount){
+function changeMonthRight(amount){
   currentMonth = currentMonth + amount;
   if (currentMonth>=1&&currentMonth<=9){
     month.innerHTML = '0' + currentMonth;
@@ -93,7 +60,7 @@ function changeMonth(amount){
 }
 
 document.getElementById("month-right").onclick = function(){
-  changeMonth(1);
+  changeMonthRight(1);
 }
 
 function changeMonthLeft(amount){
@@ -116,7 +83,6 @@ document.getElementById("month-left").onclick = function(){
 //code for year of calendar
 const year = document.querySelector('#year text');
 console.log(year);
-let currentYear = 2021;
 
 function changeYearLeft(amount){
   currentYear = currentYear - amount;
@@ -140,5 +106,49 @@ function changeYearRight(amount){
 
 document.getElementById("year-right").onclick = function(){
   changeYearRight(1);
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+  async function loadMyData() {
+    let medianAskingRentData = await d3.csv('./assets/data/medianAskingRent.csv', d3.autoType);
+    console.log(medianAskingRentData);
+    budgetData=medianAskingRentData;
+  }  
+  loadMyData();
+  
+});
+
+//to get manhattan medianAskingRent data;
+let currentBorough = 'Manhattan';
+// let currentDate = '2021-08';
+function getCurrentData(){
+  let row = budgetData.filter(d=> {
+    return d.Borough == currentBorough;
+  })
+  console.log(row);
+  currentData=row[0][currentDate];
+  console.log(currentData);
+  return currentData;
+}
+
+//code for text of median asking rent = gold number;
+const title = document.querySelector("#safe-box-cover");
+const budget = document.querySelector('#budget');
+
+title.addEventListener("mouseover", mouseOverBudget);
+title.addEventListener("mouseout", mouseOutHide);
+
+function mouseOverBudget(event) {
+  let currentData = getCurrentData();
+  budget.style.top = event.clientY + 1 + 'px' ;
+  budget.style.left = event.clientX + 1 + 'px';
+  budget.classList.add('show');
+  const budgetText = budget.querySelector('p');
+  budgetText.innerText = "Budget:"+currentData;
+  //console.log(event.clientX, event.clientY);
+}
+
+function mouseOutHide() {
+    budget.classList.remove('show');
 }
 
