@@ -3,7 +3,7 @@ let budgetData;
 
 document.addEventListener('DOMContentLoaded', async function () {
   async function loadMyData() {
-    let medianAskingRentData = await d3.csv('../assets/data/medianAskingRent.csv', d3.autoType);
+    let medianAskingRentData = await d3.csv('./assets/data/medianAskingRent.csv', d3.autoType);
     console.log(medianAskingRentData);
     budgetData=medianAskingRentData;
   }  
