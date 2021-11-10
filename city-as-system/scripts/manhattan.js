@@ -2,7 +2,7 @@
 let budgetData;
 let currentYear = 2021;
 let currentMonth = 8;
-let currentDate;
+let currentDate=currentYear+'-'+'0'+currentMonth;
 
 //code for arrows of calendar;
 //month;
@@ -88,6 +88,8 @@ function changeYearLeft(amount){
   if (currentYear<=2021&&currentYear>=2012){
     year.innerHTML = currentYear;
     console.log(currentYear);
+    currentDate = currentYear+'-'+currentMonth;
+    console.log(currentDate);
   }
 }
 
@@ -100,6 +102,8 @@ function changeYearRight(amount){
   if (currentYear<=2021&&currentYear>=2012){
     year.innerHTML = currentYear;
     console.log(currentYear);
+    currentDate = currentYear+'-'+currentMonth;
+    console.log(currentDate);
   }
 }
 
