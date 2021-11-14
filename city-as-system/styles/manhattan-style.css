@@ -54,3 +54,51 @@
 #budget.show {
     opacity: 1;
 }
+
+#one-thousand{
+    opacity:0;
+}
+
+#two-thousand{
+    opacity:0;
+}
+
+#three-thousand{
+    opacity:0;
+}
+
+#one-hundred{
+    opacity:0;
+}
+
+#two-hundred{
+    opacity:0;
+}
+
+#three-hundred{
+    opacity:0;
+}
+
+#four-hundred{
+    opacity:0;
+}
+
+#five-hundred{
+    opacity:0;
+}
+
+#six-hundred{
+    opacity:0;
+}
+
+#seven-hundred{
+    opacity:0;
+}
+
+#eight-hundred{
+    opacity:0;
+}
+
+#night-hundred{
+    opacity:0;
+}

@@ -149,9 +149,88 @@ function mouseOverBudget(event) {
   const budgetText = budget.querySelector('p');
   budgetText.innerText = "Budget:"+currentData;
   //console.log(event.clientX, event.clientY);
+  coin();
 }
 
 function mouseOutHide() {
     budget.classList.remove('show');
 }
 
+function coin(){
+  if((budgetData/1000)==1){
+    document.getElementById("one-thousand").style.opacity = '1';
+  }
+  else if((budgetData/1000)==2){
+    document.getElementById("one-thousand").style.opacity = '1';
+    document.getElementById("two-thousand").style.opacity = '1';
+  }
+  else if((budgetData/1000)==3){
+    document.getElementById("one-thousand").style.opacity = '1';
+    document.getElementById("two-thousand").style.opacity = '1';
+    document.getElementById("three-thousand").style.opacity = '1';
+  }
+
+  if((budgetData/100)==1){
+    document.getElementById("one-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==2){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==3){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==4){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==5){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '1';
+    document.getElementById("five-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==6){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '1';
+    document.getElementById("five-hundred").style.opacity = '1';
+    document.getElementById("six-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==7){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '1';
+    document.getElementById("five-hundred").style.opacity = '1';
+    document.getElementById("six-hundred").style.opacity = '1';
+    document.getElementById("seven-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==8){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '1';
+    document.getElementById("five-hundred").style.opacity = '1';
+    document.getElementById("six-hundred").style.opacity = '1';
+    document.getElementById("seven-hundred").style.opacity = '1';
+    document.getElementById("eight-hundred").style.opacity = '1';
+  }
+  else if((budgetData/100)==9){
+    document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '1';
+    document.getElementById("five-hundred").style.opacity = '1';
+    document.getElementById("six-hundred").style.opacity = '1';
+    document.getElementById("seven-hundred").style.opacity = '1';
+    document.getElementById("eight-hundred").style.opacity = '1';
+    document.getElementById("eight-hundred").style.opacity = '1';
+  }
+}
