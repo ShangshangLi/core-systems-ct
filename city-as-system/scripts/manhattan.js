@@ -160,11 +160,14 @@ function coin(currentData){
   console.log("coin"+currentData);
   if(currentData/1000==1){
     document.getElementById("one-thousand").style.opacity = '1';
+    document.getElementById("two-thousand").style.opacity = '0';
+    document.getElementById("three-thousand").style.opacity = '0';
     console.log("one-thousand");
   }
   else if(currentData/1000==2){
     document.getElementById("one-thousand").style.opacity = '1';
     document.getElementById("two-thousand").style.opacity = '1';
+    document.getElementById("three-thousand").style.opacity = '0';
     console.log("two-thousand");
   }
   else if(currentData/1000==3){
@@ -176,21 +179,25 @@ function coin(currentData){
 
   if(currentData/100==1){
     document.getElementById("one-hundred").style.opacity = '1';
+    console.log("one-hundred");
   }
   else if(currentData/100==2){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
+    console.log("two-hundred");
   }
   else if(currentData/100==3){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
+    console.log("three-hundred");
   }
   else if(currentData/100==4){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
     document.getElementById("four-hundred").style.opacity = '1';
+    console.log("four-hundred");
   }
   else if(currentData/100==5){
     document.getElementById("one-hundred").style.opacity = '1';
@@ -198,6 +205,7 @@ function coin(currentData){
     document.getElementById("three-hundred").style.opacity = '1';
     document.getElementById("four-hundred").style.opacity = '1';
     document.getElementById("five-hundred").style.opacity = '1';
+    console.log("five-hundred");
   }
   else if(currentData/100==6){
     document.getElementById("one-hundred").style.opacity = '1';
@@ -206,6 +214,7 @@ function coin(currentData){
     document.getElementById("four-hundred").style.opacity = '1';
     document.getElementById("five-hundred").style.opacity = '1';
     document.getElementById("six-hundred").style.opacity = '1';
+    console.log("six-hundred");
   }
   else if(currentData/100==7){
     document.getElementById("one-hundred").style.opacity = '1';
@@ -215,6 +224,7 @@ function coin(currentData){
     document.getElementById("five-hundred").style.opacity = '1';
     document.getElementById("six-hundred").style.opacity = '1';
     document.getElementById("seven-hundred").style.opacity = '1';
+    console.log("seven-hundred");
   }
   else if(currentData/100==8){
     document.getElementById("one-hundred").style.opacity = '1';
@@ -225,6 +235,7 @@ function coin(currentData){
     document.getElementById("six-hundred").style.opacity = '1';
     document.getElementById("seven-hundred").style.opacity = '1';
     document.getElementById("eight-hundred").style.opacity = '1';
+    console.log("eight-hundred");
   }
   else if(currentData/100==9){
     document.getElementById("one-hundred").style.opacity = '1';
@@ -235,6 +246,7 @@ function coin(currentData){
     document.getElementById("six-hundred").style.opacity = '1';
     document.getElementById("seven-hundred").style.opacity = '1';
     document.getElementById("eight-hundred").style.opacity = '1';
-    document.getElementById("eight-hundred").style.opacity = '1';
+    document.getElementById("nine-hundred").style.opacity = '1';
+    console.log("nine-hundred");
   }
 }
