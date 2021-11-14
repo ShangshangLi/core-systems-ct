@@ -2,7 +2,7 @@
 let budgetData;
 let currentYear = 2021;
 let currentMonth = 8;
-let currentDate=currentYear+'-'+'0'+currentMonth;
+let currentDate=currentYear+'-'+currentMonth;
 
 //code for arrows of calendar;
 //month;
@@ -42,7 +42,7 @@ function changeMonthRight(amount){
   if (currentMonth>=1&&currentMonth<=9){
     month.innerHTML = '0' + currentMonth;
     console.log(currentMonth);
-    currentDate = currentYear+'-'+'0'+currentMonth;
+    currentDate = currentYear+'-'+currentMonth;
     console.log(currentDate);
   }
   else if (currentMonth>=10&&currentMonth<=12){
@@ -63,7 +63,7 @@ function changeMonthLeft(amount){
   if (currentMonth>=1&&currentMonth<=9){
     month.innerHTML = '0' + currentMonth;
     console.log(currentMonth);
-    currentDate = currentYear+'-'+'0'+currentMonth;
+    currentDate = currentYear+'-'+currentMonth;
     console.log(currentDate);
   }
   else if (currentMonth>=10&&currentMonth<=12){
