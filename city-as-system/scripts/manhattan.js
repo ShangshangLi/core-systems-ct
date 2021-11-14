@@ -158,48 +158,48 @@ function mouseOutHide() {
 
 function coin(currentData){
   console.log("coin"+currentData);
-  if((currentData/1000)==1){
+  if(currentData/1000==1){
     document.getElementById("one-thousand").style.opacity = '1';
     console.log("one-thousand");
   }
-  else if((currentData/1000)==2){
+  else if(currentData/1000==2){
     document.getElementById("one-thousand").style.opacity = '1';
     document.getElementById("two-thousand").style.opacity = '1';
     console.log("two-thousand");
   }
-  else if((currentData/1000)==3){
+  else if(currentData/1000==3){
     document.getElementById("one-thousand").style.opacity = '1';
     document.getElementById("two-thousand").style.opacity = '1';
     document.getElementById("three-thousand").style.opacity = '1';
     console.log("three-thousand");
   }
 
-  if((currentData/100)==1){
+  if(currentData/100==1){
     document.getElementById("one-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==2){
+  else if(currentData/100==2){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==3){
+  else if(currentData/100==3){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==4){
+  else if(currentData/100==4){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
     document.getElementById("four-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==5){
+  else if(currentData/100==5){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
     document.getElementById("four-hundred").style.opacity = '1';
     document.getElementById("five-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==6){
+  else if(currentData/100==6){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
@@ -207,7 +207,7 @@ function coin(currentData){
     document.getElementById("five-hundred").style.opacity = '1';
     document.getElementById("six-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==7){
+  else if(currentData/100==7){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
@@ -216,7 +216,7 @@ function coin(currentData){
     document.getElementById("six-hundred").style.opacity = '1';
     document.getElementById("seven-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==8){
+  else if(currentData/100==8){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
@@ -226,7 +226,7 @@ function coin(currentData){
     document.getElementById("seven-hundred").style.opacity = '1';
     document.getElementById("eight-hundred").style.opacity = '1';
   }
-  else if((currentData/100)==9){
+  else if(currentData/100==9){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
