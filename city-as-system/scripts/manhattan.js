@@ -179,17 +179,38 @@ function coin(currentData){
 
   if(currentData%1000>=100&&currentData%1000<200){
     document.getElementById("one-hundred").style.opacity = '1';
+    document.getElementById("two-hundred").style.opacity = '0';
+    document.getElementById("three-hundred").style.opacity = '0';
+    document.getElementById("four-hundred").style.opacity = '0';
+    document.getElementById("five-hundred").style.opacity = '0';
+    document.getElementById("six-hundred").style.opacity = '0';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("one-hundred");
   }
   else if(currentData%1000>=200&&currentData%1000<300){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
+    document.getElementById("three-hundred").style.opacity = '0';
+    document.getElementById("four-hundred").style.opacity = '0';
+    document.getElementById("five-hundred").style.opacity = '0';
+    document.getElementById("six-hundred").style.opacity = '0';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("two-hundred");
   }
   else if(currentData%1000>=300&&currentData%1000<400){
     document.getElementById("one-hundred").style.opacity = '1';
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
+    document.getElementById("four-hundred").style.opacity = '0';
+    document.getElementById("five-hundred").style.opacity = '0';
+    document.getElementById("six-hundred").style.opacity = '0';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("three-hundred");
   }
   else if(currentData%1000>=400&&currentData%1000<500){
@@ -197,6 +218,11 @@ function coin(currentData){
     document.getElementById("two-hundred").style.opacity = '1';
     document.getElementById("three-hundred").style.opacity = '1';
     document.getElementById("four-hundred").style.opacity = '1';
+    document.getElementById("five-hundred").style.opacity = '0';
+    document.getElementById("six-hundred").style.opacity = '0';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("four-hundred");
   }
   else if(currentData%1000>=500&&currentData%1000<600){
@@ -205,6 +231,10 @@ function coin(currentData){
     document.getElementById("three-hundred").style.opacity = '1';
     document.getElementById("four-hundred").style.opacity = '1';
     document.getElementById("five-hundred").style.opacity = '1';
+    document.getElementById("six-hundred").style.opacity = '0';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("five-hundred");
   }
   else if(currentData%1000>=600&&currentData%1000<700){
@@ -214,6 +244,9 @@ function coin(currentData){
     document.getElementById("four-hundred").style.opacity = '1';
     document.getElementById("five-hundred").style.opacity = '1';
     document.getElementById("six-hundred").style.opacity = '1';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("six-hundred");
   }
   else if(currentData%1000>=700&&currentData%1000<800){
@@ -224,6 +257,8 @@ function coin(currentData){
     document.getElementById("five-hundred").style.opacity = '1';
     document.getElementById("six-hundred").style.opacity = '1';
     document.getElementById("seven-hundred").style.opacity = '1';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("seven-hundred");
   }
   else if(currentData%1000>=800&&currentData%1000<900){
@@ -235,6 +270,7 @@ function coin(currentData){
     document.getElementById("six-hundred").style.opacity = '1';
     document.getElementById("seven-hundred").style.opacity = '1';
     document.getElementById("eight-hundred").style.opacity = '1';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("eight-hundred");
   }
   else if(currentData%1000>=900){
