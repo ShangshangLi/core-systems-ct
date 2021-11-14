@@ -286,6 +286,15 @@ function coin(currentData){
     console.log("nine-hundred");
   }
   else{
+    document.getElementById("one-hundred").style.opacity = '0';
+    document.getElementById("two-hundred").style.opacity = '0';
+    document.getElementById("three-hundred").style.opacity = '0';
+    document.getElementById("four-hundred").style.opacity = '0';
+    document.getElementById("five-hundred").style.opacity = '0';
+    document.getElementById("six-hundred").style.opacity = '0';
+    document.getElementById("seven-hundred").style.opacity = '0';
+    document.getElementById("eight-hundred").style.opacity = '0';
+    document.getElementById("nine-hundred").style.opacity = '0';
     console.log("hundred=0");
   }
 }
