@@ -594,10 +594,10 @@ function mouseOutAvatar() {
 function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
   let avatarBody =document.querySelector('#queens-body path');
-  if(currentWeightData>3000){
+  if(currentWeightData>2000){
     avatarBody.style.transform='scaleX('+currentWeightData/5000+')';
   }else{
-    avatarBody.style.transform='scaleX(0.3)';
+    avatarBody.style.transform='scaleX('+currentWeightData/1000+')';
     console.log('small');
     avatarBody.style.transform='scaleY('+currentWeightData/2000+')';
   }
