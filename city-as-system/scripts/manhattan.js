@@ -328,10 +328,13 @@ function getCurrentRentalIndexData(){
 
 //code for text of rentalIndex = income = furniture number and flower number;
 const bed = document.querySelector("#bed");
+const drawer = document.querySelector("#bed");
 const income = document.querySelector('#income');
 
 bed.addEventListener("mouseover", mouseOverFurniture);
 bed.addEventListener("mouseout", mouseOutFurniture);
+drawer.addEventListener("mouseover", mouseOverFurniture);
+drawer.addEventListener("mouseout", mouseOutFurniture);
 
 function mouseOverFurniture(event) {
   let currentIncomeData = getCurrentRentalIndexData();
