@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 //to get manhattan medianAskingRent data;
-let currentBorough = 'Brooklyn';
+let currentBorough = 'Queens';
 
 function getCurrentData(){
   let row = budgetData.filter(d=> {
@@ -567,17 +567,14 @@ function getCurrentRentalInventoryData(){
 
 //code for text of rental inventory = weight;
 const weight = document.querySelector('#weight');
-const body = document.querySelector("#brooklyn-body");
-const eye = document.querySelector("#brooklyn-eyes");
-const ear = document.querySelector("#brooklyn-ear");
+const body = document.querySelector("#queens-body");
+const eye = document.querySelector("#queens-eyes");
 
 
 body.addEventListener("mouseover", mouseOverAvatar);
 body.addEventListener("mouseout", mouseOutAvatar);
 eye.addEventListener("mouseover", mouseOverAvatar);
 eye.addEventListener("mouseout", mouseOutAvatar);
-ear.addEventListener("mouseover", mouseOverAvatar);
-ear.addEventListener("mouseout", mouseOutAvatar);
 
 function mouseOverAvatar(event) {
   let currentRentalInventoryData = getCurrentRentalInventoryData();
@@ -596,7 +593,6 @@ function mouseOutAvatar() {
 //code to control the avatar size;
 function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
-  let avatarBody =document.querySelector('#brooklyn-body .st30');
-  //avatarBody.style.width=currentWeightData+'px';
+  let avatarBody =document.querySelector('#queens-body path');
   avatarBody.style.transform='scaleX('+currentWeightData/10000+')';
 }
