@@ -1,4 +1,3 @@
-//load medianAskingRent.csv data;
 let budgetData;
 let incomeData;
 let weightData;

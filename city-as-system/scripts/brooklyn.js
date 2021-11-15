@@ -1,11 +1,3 @@
-//load medianAskingRent.csv data;
-let budgetData;
-let incomeData;
-let weightData;
-let currentYear = 2021;
-let currentMonth = 8;
-let currentDate=currentYear+'-'+currentMonth;
-
 //code for arrows of calendar;
 //month;
 let monthArrow = false;
@@ -570,17 +562,17 @@ function getCurrentRentalInventoryData(){
 
 //code for text of rental inventory = weight;
 const weight = document.querySelector('#weight');
-const body = document.querySelector("#manhattan-body");
-const leg = document.querySelector("#manhattan-legs");
-const eye = document.querySelector("#manhattan-eyes");
+const bodyB = document.querySelector("#brooklyn-body");
+const earB = document.querySelector("#brooklyn-ear");
+const eyeB = document.querySelector("#brooklyn-eyes");
 
 
-body.addEventListener("mouseover", mouseOverAvatar);
-body.addEventListener("mouseout", mouseOutAvatar);
-leg.addEventListener("mouseover", mouseOverAvatar);
-leg.addEventListener("mouseout", mouseOutAvatar);
-eye.addEventListener("mouseover", mouseOverAvatar);
-eye.addEventListener("mouseout", mouseOutAvatar);
+bodyB.addEventListener("mouseover", mouseOverAvatar);
+bodyB.addEventListener("mouseout", mouseOutAvatar);
+earB.addEventListener("mouseover", mouseOverAvatar);
+earB.addEventListener("mouseout", mouseOutAvatar);
+eyeB.addEventListener("mouseover", mouseOverAvatar);
+eyeB.addEventListener("mouseout", mouseOutAvatar);
 
 function mouseOverAvatar(event) {
   let currentRentalInventoryData = getCurrentRentalInventoryData();
@@ -599,7 +591,7 @@ function mouseOutAvatar() {
 //code to control the avatar size;
 function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
-  let avatarBody =document.querySelector('#manhattan-body .st18');
+  let avatarBody =document.querySelector('#brooklyn-body .st30');
   //avatarBody.style.width=currentWeightData+'px';
   avatarBody.style.transform='scaleX('+currentWeightData/10000+')';
 }

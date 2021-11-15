@@ -1,0 +1,103 @@
+#month-left{
+    opacity:0;
+}
+
+#month-right{
+    opacity:0;
+}
+
+#year-left{
+    opacity:0;
+}
+
+#year-right{
+    opacity:0;
+}
+
+#safe-box-cover:hover rect{
+    opacity:0;
+}
+
+#safe-box-cover:hover path{
+    opacity:0;
+}
+
+#safe-box-cover:hover polygon{
+    opacity:0;
+}
+
+#safe-box-cover {
+    cursor:pointer;
+}
+
+#safe-box-cover:hover {
+    color:palevioletred;
+}
+
+#budget {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#budget p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#budget.show {
+    opacity: 1;
+}
+
+#income {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#income p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#income.show {
+    opacity: 1;
+}
+
+#weight {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#weight p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#weight.show {
+    opacity: 1;
+}
+
+#brooklyn-body path{
+    transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
