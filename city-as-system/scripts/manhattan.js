@@ -1,6 +1,7 @@
 //load medianAskingRent.csv data;
 let budgetData;
 let incomeData;
+let weightData;
 let currentYear = 2021;
 let currentMonth = 8;
 let currentDate=currentYear+'-'+currentMonth;
@@ -145,11 +146,11 @@ function getCurrentData(){
 }
 
 //code for text of median asking rent = gold number;
-const title = document.querySelector("#safe-box-cover");
+const safebox = document.querySelector("#safe-box-cover");
 const budget = document.querySelector('#budget');
 
-title.addEventListener("mouseover", mouseOverBudget);
-title.addEventListener("mouseout", mouseOutHide);
+safebox.addEventListener("mouseover", mouseOverBudget);
+safebox.addEventListener("mouseout", mouseOutHide);
 
 function mouseOverBudget(event) {
   let currentData = getCurrentData();
@@ -533,4 +534,56 @@ function furniture(currentIncomeData){
     document.getElementById("flower-nine").style.opacity = '0';
     console.log("hundred=0");
   }
+}
+
+
+
+//load weightData;
+document.addEventListener('DOMContentLoaded', async function () {
+  async function loadMyData() {
+    let rentalInventoryData = await d3.csv('./assets/data/rentalInventory.csv', d3.autoType);
+    console.log(rentalInventoryData);
+    weightData=rentalInventoryData;
+  }  
+  loadMyData();
+  
+})
+
+//to get manhattan rentalIndex data;
+function getCurrentRentalInventoryData(){
+  let row = weightData.filter(d=> {
+    return d.Borough == currentBorough;
+  })
+  console.log(row);
+  currentWeightData=row[0][currentDate];
+  console.log(currentWeightData);
+  return currentWeightData;
+}
+
+//code for text of rental inventory = weight;
+const weight = document.querySelector('#weight');
+const body = document.querySelector("#manhattan-body");
+const leg = document.querySelector("#manhattan-legs");
+const eye = document.querySelector("#manhattan-eyes");
+
+
+body.addEventListener("mouseover", mouseOverAvatar);
+body.addEventListener("mouseout", mouseOutAvatar);
+leg.addEventListener("mouseover", mouseOverAvatar);
+leg.addEventListener("mouseout", mouseOutAvatar);
+eye.addEventListener("mouseover", mouseOverAvatar);
+eye.addEventListener("mouseout", mouseOutAvatar);
+
+function mouseOverAvatar(event) {
+  let currentRentalInventoryData = getCurrentRentalInventoryData();
+  weight.style.top = event.clientY + 1 + 'px' ;
+  weight.style.left = event.clientX + 1 + 'px';
+  weight.classList.add('show');
+  const weightText = weight.querySelector('p');
+  weightText.innerText = "Weight:"+currentRentalInventoryData;
+  //coin(currentData);
+}
+
+function mouseOutAvatar() {
+    weight.classList.remove('show');
 }
