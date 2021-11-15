@@ -600,5 +600,6 @@ function mouseOutAvatar() {
 function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
   let avatarBody =document.querySelector('#manhattan-body .st18');
-  avatarBody.style.width=currentWeightData+'px';
+  //avatarBody.style.width=currentWeightData+'px';
+  avatarBody.style.transform=scaleX(1.5);
 }
