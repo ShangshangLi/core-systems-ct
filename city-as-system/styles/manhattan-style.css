@@ -97,7 +97,7 @@
     opacity: 1;
 }
 
-#manhattan-body{
-transform-origin: 10% 10%;
+#manhattan-body path{
+    transform-origin: 50% 50%;
   transform-box: fill-box;
 }
