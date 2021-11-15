@@ -1,3 +1,9 @@
+let budgetData;
+let incomeData;
+let weightData;
+let currentYear = 2021;
+let currentMonth = 8;
+let currentDate=currentYear+'-'+currentMonth;
 //code for arrows of calendar;
 //month;
 let monthArrow = false;
@@ -386,7 +392,6 @@ function mouseOverFurniture(event) {
   income.classList.add('show');
   const incomeText = income.querySelector('p');
   incomeText.innerText = "Income:"+currentIncomeData;
-  //furniture(currentIncomeData);
 }
 
 function mouseOutFurniture() {
@@ -562,17 +567,17 @@ function getCurrentRentalInventoryData(){
 
 //code for text of rental inventory = weight;
 const weight = document.querySelector('#weight');
-const bodyB = document.querySelector("#brooklyn-body");
-const earB = document.querySelector("#brooklyn-ear");
-const eyeB = document.querySelector("#brooklyn-eyes");
+const body = document.querySelector("#brooklyn-body");
+const eye = document.querySelector("#brooklyn-eyes");
+const eEar = document.querySelector("#brooklyn-external-ear");
 
 
-bodyB.addEventListener("mouseover", mouseOverAvatar);
-bodyB.addEventListener("mouseout", mouseOutAvatar);
-earB.addEventListener("mouseover", mouseOverAvatar);
-earB.addEventListener("mouseout", mouseOutAvatar);
-eyeB.addEventListener("mouseover", mouseOverAvatar);
-eyeB.addEventListener("mouseout", mouseOutAvatar);
+body.addEventListener("mouseover", mouseOverAvatar);
+body.addEventListener("mouseout", mouseOutAvatar);
+eye.addEventListener("mouseover", mouseOverAvatar);
+eye.addEventListener("mouseout", mouseOutAvatar);
+eEar.addEventListener("mouseover", mouseOverAvatar);
+eEar.addEventListener("mouseout", mouseOutAvatar);
 
 function mouseOverAvatar(event) {
   let currentRentalInventoryData = getCurrentRentalInventoryData();
