@@ -335,10 +335,21 @@ function getCurrentRentalIndexData(){
 }
 
 //code for text of rentalIndex = income = furniture number and flower number;
+const income = document.querySelector('#income');
+
 const bed = document.querySelector("#bed");
 const drawer = document.querySelector("#drawer");
 const rug = document.querySelector("#rug");
-const income = document.querySelector('#income');
+const vase = document.querySelector("#vase")
+const f1 = document.querySelector("#flower-one")
+const f2 = document.querySelector("#flower-two")
+const f3 = document.querySelector("#flower-three")
+const f4 = document.querySelector("#flower-four")
+const f5 = document.querySelector("#flower-five")
+const f6 = document.querySelector("#flower-six")
+const f7 = document.querySelector("#flower-seven")
+const f8 = document.querySelector("#flower-eight")
+const f9 = document.querySelector("#flower-nine")
 
 bed.addEventListener("mouseover", mouseOverFurniture);
 bed.addEventListener("mouseout", mouseOutFurniture);
@@ -346,6 +357,26 @@ drawer.addEventListener("mouseover", mouseOverFurniture);
 drawer.addEventListener("mouseout", mouseOutFurniture);
 rug.addEventListener("mouseover", mouseOverFurniture);
 rug.addEventListener("mouseout", mouseOutFurniture);
+vase.addEventListener("mouseover", mouseOverFurniture);
+vase.addEventListener("mouseout", mouseOutFurniture);
+f1.addEventListener("mouseover", mouseOverFurniture);
+f1.addEventListener("mouseout", mouseOutFurniture);
+f2.addEventListener("mouseover", mouseOverFurniture);
+f2.addEventListener("mouseout", mouseOutFurniture);
+f3.addEventListener("mouseover", mouseOverFurniture);
+f3.addEventListener("mouseout", mouseOutFurniture);
+f4.addEventListener("mouseover", mouseOverFurniture);
+f4.addEventListener("mouseout", mouseOutFurniture);
+f5.addEventListener("mouseover", mouseOverFurniture);
+f5.addEventListener("mouseout", mouseOutFurniture);
+f6.addEventListener("mouseover", mouseOverFurniture);
+f6.addEventListener("mouseout", mouseOutFurniture);
+f7.addEventListener("mouseover", mouseOverFurniture);
+f7.addEventListener("mouseout", mouseOutFurniture);
+f8.addEventListener("mouseover", mouseOverFurniture);
+f8.addEventListener("mouseout", mouseOutFurniture);
+f9.addEventListener("mouseover", mouseOverFurniture);
+f9.addEventListener("mouseout", mouseOutFurniture);
 
 function mouseOverFurniture(event) {
   let currentIncomeData = getCurrentRentalIndexData();
