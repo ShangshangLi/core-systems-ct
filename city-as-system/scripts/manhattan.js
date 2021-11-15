@@ -60,6 +60,8 @@ document.getElementById("month-right").onclick = function(){
   changeMonthRight(1);
   let currentIncomeData = getCurrentRentalIndexData();
   furniture(currentIncomeData);
+  let currentWeightData = getCurrentRentalInventoryData();
+  avatar(currentWeightData);
 }
 
 function changeMonthLeft(amount){
@@ -83,6 +85,8 @@ document.getElementById("month-left").onclick = function(){
   changeMonthLeft(1);
   let currentIncomeData = getCurrentRentalIndexData();
   furniture(currentIncomeData);
+  let currentWeightData = getCurrentRentalInventoryData();
+  avatar(currentWeightData);
 }
 
 //code for year of calendar
@@ -103,6 +107,8 @@ document.getElementById("year-left").onclick = function(){
   changeYearLeft(1);
   let currentIncomeData = getCurrentRentalIndexData();
   furniture(currentIncomeData);
+  let currentWeightData = getCurrentRentalInventoryData();
+  avatar(currentWeightData);
 }
 
 function changeYearRight(amount){
@@ -119,6 +125,8 @@ document.getElementById("year-right").onclick = function(){
   changeYearRight(1);
   let currentIncomeData = getCurrentRentalIndexData();
   furniture(currentIncomeData);
+  let currentWeightData = getCurrentRentalInventoryData();
+  avatar(currentWeightData);
 }
 
 //losad budgetData;
@@ -556,7 +564,7 @@ function getCurrentRentalInventoryData(){
   })
   console.log(row);
   currentWeightData=row[0][currentDate];
-  console.log(currentWeightData);
+  console.log("Rental Inventory: "+currentWeightData);
   return currentWeightData;
 }
 
@@ -586,4 +594,11 @@ function mouseOverAvatar(event) {
 
 function mouseOutAvatar() {
     weight.classList.remove('show');
+}
+
+//code to control the avatar size;
+function avatar(currentWeightData){
+  console.log("Weight:"+currentWeightData);
+  let avatarBody =document.querySelector('#manhattan-body .st18');
+  avatarBody.style.width='500px';
 }
