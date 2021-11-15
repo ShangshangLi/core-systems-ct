@@ -1,5 +1,6 @@
 //load medianAskingRent.csv data;
 let budgetData;
+let incomeData;
 let currentYear = 2021;
 let currentMonth = 8;
 let currentDate=currentYear+'-'+currentMonth;
@@ -111,6 +112,7 @@ document.getElementById("year-right").onclick = function(){
   changeYearRight(1);
 }
 
+//losad budgetData;
 document.addEventListener('DOMContentLoaded', async function () {
   async function loadMyData() {
     let medianAskingRentData = await d3.csv('./assets/data/medianAskingRent.csv', d3.autoType);
@@ -156,6 +158,7 @@ function mouseOutHide() {
     budget.classList.remove('show');
 }
 
+//code to control the number of gold in the safe box;
 function coin(currentData){
   console.log("coin"+currentData);
   if(currentData%10000>=1000&&currentData%10000<2000){
@@ -297,4 +300,49 @@ function coin(currentData){
     document.getElementById("nine-hundred").style.opacity = '0';
     console.log("hundred=0");
   }
+}
+
+
+
+//load incomeData;
+document.addEventListener('DOMContentLoaded', async function () {
+  async function loadMyData() {
+    let rentalIndexData = await d3.csv('./assets/data/rentalIndex.csv', d3.autoType);
+    console.log(rentalIndexData);
+    incomeData=rentalIndexData;
+  }  
+  loadMyData();
+  
+})
+
+//to get manhattan rentalIndex data;
+function getCurrentRentalIndexData(){
+  let row = incomeData.filter(d=> {
+    return d.Borough == currentBorough;
+  })
+  console.log(row);
+  currentIncomeData=row[0][currentDate];
+  console.log(currentIncomeData);
+  return currentIncomeData;
+}
+
+//code for text of rentalIndex = income = furniture number and flower number;
+const bed = document.querySelector("#bed");
+const income = document.querySelector('#income');
+
+bed.addEventListener("mouseover", mouseOverFurniture);
+bed.addEventListener("mouseout", mouseOutFurniture);
+
+function mouseOverFurniture(event) {
+  let currentIncomeData = getCurrentRentalIndexData();
+  income.style.top = event.clientY + 1 + 'px' ;
+  income.style.left = event.clientX + 1 + 'px';
+  income.classList.add('show');
+  const incomeText = income.querySelector('p');
+  incomeText.innerText = "Income:"+currentIncomeData;
+  //coin(currentData);
+}
+
+function mouseOutFurniture() {
+  income.classList.remove('show');
 }
