@@ -57,6 +57,8 @@ function changeMonthRight(amount){
 
 document.getElementById("month-right").onclick = function(){
   changeMonthRight(1);
+  let currentIncomeData = getCurrentRentalIndexData();
+  furniture(currentIncomeData);
 }
 
 function changeMonthLeft(amount){
@@ -78,6 +80,8 @@ function changeMonthLeft(amount){
 
 document.getElementById("month-left").onclick = function(){
   changeMonthLeft(1);
+  let currentIncomeData = getCurrentRentalIndexData();
+  furniture(currentIncomeData);
 }
 
 //code for year of calendar
@@ -96,6 +100,8 @@ function changeYearLeft(amount){
 
 document.getElementById("year-left").onclick = function(){
   changeYearLeft(1);
+  let currentIncomeData = getCurrentRentalIndexData();
+  furniture(currentIncomeData);
 }
 
 function changeYearRight(amount){
@@ -110,6 +116,8 @@ function changeYearRight(amount){
 
 document.getElementById("year-right").onclick = function(){
   changeYearRight(1);
+  let currentIncomeData = getCurrentRentalIndexData();
+  furniture(currentIncomeData);
 }
 
 //losad budgetData;
@@ -346,9 +354,152 @@ function mouseOverFurniture(event) {
   income.classList.add('show');
   const incomeText = income.querySelector('p');
   incomeText.innerText = "Income:"+currentIncomeData;
-  //coin(currentData);
+  //furniture(currentIncomeData);
 }
 
 function mouseOutFurniture() {
   income.classList.remove('show');
+}
+
+//code to control the furniture;
+function furniture(currentIncomeData){
+  console.log("furniture:"+currentIncomeData);
+  if(currentIncomeData%10000>=1000&&currentIncomeData%10000<2000){
+    document.getElementById("bed").style.opacity = '1';
+    document.getElementById("drawer").style.opacity = '0';
+    document.getElementById("rug").style.opacity = '0';
+    console.log("one-thousand");
+  }
+  else if(currentIncomeData%10000>=2000&&currentIncomeData%10000<3000){
+    document.getElementById("bed").style.opacity = '1';
+    document.getElementById("drawer").style.opacity = '1';
+    document.getElementById("rug").style.opacity = '0';
+    console.log("two-thousand");
+  }
+  else if(currentIncomeData%10000>=3000&&currentIncomeData%10000<4000){
+    document.getElementById("bed").style.opacity = '1';
+    document.getElementById("drawer").style.opacity = '1';
+    document.getElementById("rug").style.opacity = '1';
+    console.log("three-thousand");
+  }
+
+  if(currentIncomeData%1000>=100&&currentIncomeData%1000<200){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '0';
+    document.getElementById("flower-three").style.opacity = '0';
+    document.getElementById("flower-four").style.opacity = '0';
+    document.getElementById("flower-five").style.opacity = '0';
+    document.getElementById("flower-six").style.opacity = '0';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("one-hundred");
+  }
+  else if (currentIncomeData%1000>=200&&currentIncomeData%1000<300){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '0';
+    document.getElementById("flower-four").style.opacity = '0';
+    document.getElementById("flower-five").style.opacity = '0';
+    document.getElementById("flower-six").style.opacity = '0';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("two-hundred");
+  }
+  else if(currentIncomeData%1000>=300&&currentIncomeData%1000<400){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '0';
+    document.getElementById("flower-five").style.opacity = '0';
+    document.getElementById("flower-six").style.opacity = '0';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("three-hundred");
+  }
+  else if(currentIncomeData%1000>=400&&currentIncomeData%1000<500){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '1';
+    document.getElementById("flower-five").style.opacity = '0';
+    document.getElementById("flower-six").style.opacity = '0';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("four-hundred");
+  }
+  else if(currentIncomeData%1000>=500&&currentIncomeData%1000<600){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '1';
+    document.getElementById("flower-five").style.opacity = '1';
+    document.getElementById("flower-six").style.opacity = '0';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("five-hundred");
+  }
+  else if(currentIncomeData%1000>=600&&currentIncomeData%1000<700){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '1';
+    document.getElementById("flower-five").style.opacity = '1';
+    document.getElementById("flower-six").style.opacity = '1';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("six-hundred");
+  }
+  else if(currentIncomeData%1000>=700&&currentIncomeData%1000<800){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '1';
+    document.getElementById("flower-five").style.opacity = '1';
+    document.getElementById("flower-six").style.opacity = '1';
+    document.getElementById("flower-seven").style.opacity = '1';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("seven-hundred");
+  }
+  else if(currentIncomeData%1000>=800&&currentIncomeData%1000<900){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '1';
+    document.getElementById("flower-five").style.opacity = '1';
+    document.getElementById("flower-six").style.opacity = '1';
+    document.getElementById("flower-seven").style.opacity = '1';
+    document.getElementById("flower-eight").style.opacity = '1';
+    document.getElementById("flower-nine").style.opacity = '0';
+  }
+  else if(currentIncomeData%1000>=900){
+    document.getElementById("flower-one").style.opacity = '1';
+    document.getElementById("flower-two").style.opacity = '1';
+    document.getElementById("flower-three").style.opacity = '1';
+    document.getElementById("flower-four").style.opacity = '1';
+    document.getElementById("flower-five").style.opacity = '1';
+    document.getElementById("flower-six").style.opacity = '1';
+    document.getElementById("flower-seven").style.opacity = '1';
+    document.getElementById("flower-eight").style.opacity = '1';
+    document.getElementById("flower-nine").style.opacity = '1';
+    console.log("nine-hundred");
+  }
+  else{
+    document.getElementById("flower-one").style.opacity = '0';
+    document.getElementById("flower-two").style.opacity = '0';
+    document.getElementById("flower-three").style.opacity = '0';
+    document.getElementById("flower-four").style.opacity = '0';
+    document.getElementById("flower-five").style.opacity = '0';
+    document.getElementById("flower-six").style.opacity = '0';
+    document.getElementById("flower-seven").style.opacity = '0';
+    document.getElementById("flower-eight").style.opacity = '0';
+    document.getElementById("flower-nine").style.opacity = '0';
+    console.log("hundred=0");
+  }
 }
