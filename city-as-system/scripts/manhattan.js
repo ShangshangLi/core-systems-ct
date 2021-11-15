@@ -601,5 +601,5 @@ function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
   let avatarBody =document.querySelector('#manhattan-body .st18');
   //avatarBody.style.width=currentWeightData+'px';
-  avatarBody.style.transform=scaleX(1.5);
+  avatarBody.style.transform='scaleX('+currentWeightData/10000+')';
 }

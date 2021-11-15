@@ -97,7 +97,7 @@
     opacity: 1;
 }
 
-#manhattan-body st18{
-transform-origin: 50% 50%;
+#manhattan-body{
+transform-origin: 10% 10%;
   transform-box: fill-box;
 }
