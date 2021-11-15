@@ -158,19 +158,19 @@ function mouseOutHide() {
 
 function coin(currentData){
   console.log("coin"+currentData);
-  if(currentData/1000==1){
+  if(currentData%10000>=1000&&currentData%10000<2000){
     document.getElementById("one-thousand").style.opacity = '1';
     document.getElementById("two-thousand").style.opacity = '0';
     document.getElementById("three-thousand").style.opacity = '0';
     console.log("one-thousand");
   }
-  else if(currentData/1000==2){
+  else if(currentData%10000>=2000&&currentData%10000<3000){
     document.getElementById("one-thousand").style.opacity = '1';
     document.getElementById("two-thousand").style.opacity = '1';
     document.getElementById("three-thousand").style.opacity = '0';
     console.log("two-thousand");
   }
-  else if(currentData/1000==3){
+  else if(currentData%10000>=3000&&currentData%10000<4000){
     document.getElementById("one-thousand").style.opacity = '1';
     document.getElementById("two-thousand").style.opacity = '1';
     document.getElementById("three-thousand").style.opacity = '1';
