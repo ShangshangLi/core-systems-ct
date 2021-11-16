@@ -97,9 +97,9 @@
     opacity: 1;
 }
 
-#brooklyn-body path{
+#brooklyn {
     transform-origin: 50% 50%;
-  transform-box: fill-box;
+    transform-box: fill-box;
 }
 
 #rug {

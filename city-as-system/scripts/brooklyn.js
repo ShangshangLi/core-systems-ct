@@ -596,7 +596,9 @@ function mouseOutAvatar() {
 //code to control the avatar size;
 function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
-  let avatarBody =document.querySelector('#brooklyn-body .st30');
-  //avatarBody.style.width=currentWeightData+'px';
-  avatarBody.style.transform='scaleX('+currentWeightData/6000+')';
+  let avatar =document.querySelector('#brooklyn');
+  let scale = d3.scaleLinear().domain([0, 26000]).range([0.6, 1.5]);
+  let ratio=scale(currentWeightData);
+  console.log(ratio);
+  avatar.style.transform='scale('+ratio+')';
 }
