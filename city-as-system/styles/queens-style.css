@@ -98,6 +98,7 @@
 }
 
 #queens {
+    transform: scale(1.002425);
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }

@@ -98,6 +98,7 @@
 }
 
 #manhattan {
+    transform: scale(0.9979071428571429);
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }

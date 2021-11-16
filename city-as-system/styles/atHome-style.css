@@ -78,16 +78,19 @@
 }
 
 #brooklyn {
+    transform: scale(1.1310346153846154);
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }
 
 #manhattan {
+    transform: scale(0.9979071428571429);
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }
 
 #queens {
+    transform: scale(1.002425);
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }

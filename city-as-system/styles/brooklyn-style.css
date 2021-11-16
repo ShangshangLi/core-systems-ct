@@ -98,6 +98,7 @@
 }
 
 #brooklyn {
+    transform: scale(1.1310346153846154);
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }

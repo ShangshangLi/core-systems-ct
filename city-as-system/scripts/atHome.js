@@ -54,13 +54,17 @@ function changeMonthRight(amount){
 }
 
 document.getElementById("month-right").onclick = function(){
-  changeMonthRight(1);
-  let currentWeightDataBrooklyn = getCurrentRentalInventoryData("Brooklyn");
-  avatarBrooklyn(currentWeightDataBrooklyn);
-  let currentWeightDataManhattan = getCurrentRentalInventoryData("Manhattan");
-  avatarManhattan(currentWeightDataManhattan);
-  let currentWeightDataQueens = getCurrentRentalInventoryData("Queens");
-  avatarQueens(currentWeightDataQueens);
+  if(currentMonth==8 && currentYear==2021){
+    console.log("the end");
+  }else{
+    changeMonthRight(1);
+    let currentWeightDataBrooklyn = getCurrentRentalInventoryData("Brooklyn");
+    avatarBrooklyn(currentWeightDataBrooklyn);
+    let currentWeightDataManhattan = getCurrentRentalInventoryData("Manhattan");
+    avatarManhattan(currentWeightDataManhattan);
+    let currentWeightDataQueens = getCurrentRentalInventoryData("Queens");
+    avatarQueens(currentWeightDataQueens);
+  }
 }
 
 function changeMonthLeft(amount){
