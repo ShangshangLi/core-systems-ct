@@ -599,7 +599,7 @@ function mouseOutAvatar() {
 function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
   let avatar =document.querySelector('#manhattan');
-  let scale = d3.scaleLinear().domain([0, 26000]).range([0.6, 1.5]);
+  let scale = d3.scaleLinear().domain([0, 42000]).range([0.6, 1.5]);
   let ratio=scale(currentWeightData);
   console.log(ratio);
   avatar.style.transform='scale('+ratio+')';
