@@ -134,10 +134,6 @@ document.getElementById("year-right").onclick = function(){
   avatarQueens(currentWeightDataQueens);
 }
 
-// let boroughB = 'Brooklyn';
-// let boroughM = 'Manhattan';
-// let boroughQ = 'Queens';
-
 //load weightData;
 document.addEventListener('DOMContentLoaded', async function () {
   async function loadMyData() {
@@ -158,46 +154,61 @@ function getCurrentRentalInventoryData(currentBorough){
   currentWeightData=row[0][currentDate];
   console.log("Rental Inventory: "+currentWeightData);
   return currentWeightData;
-  // let rowB = weightData.filter(d=> {
-  //   return d.Borough == boroughB;
-  // })
-  // let rowM = weightData.filter(d=> {
-  //   return d.Borough == boroughM;
-  // })
-  // let rowQ = weightData.filter(d=> {
-  //   return d.Borough == boroughQ;
-  // })
-  // console.log("Brooklyn:"+rowB);
-  // console.log("Manhattan:"+rowM);
-  // console.log("Queens:"+rowM);
 }
 
 //code for text of rental inventory = weight;
-// const weight = document.querySelector('#weight');
-// const body = document.querySelector("#manhattan-body");
-// const leg = document.querySelector("#manhattan-legs");
-// const eye = document.querySelector("#manhattan-eyes");
+const weightBrooklyn = document.querySelector('#weightBrooklyn');
+const bodyBrooklyn = document.querySelector("#brooklyn");
+const weightManhattan = document.querySelector('#weightManhattan');
+const bodyManhattan = document.querySelector("#manhattan");
+const weightQueens = document.querySelector('#weightQueens ');
+const bodyQueens = document.querySelector("#queens ");
 
+bodyBrooklyn.addEventListener("mouseover", mouseOverBrooklyn);
+bodyBrooklyn.addEventListener("mouseout", mouseOutBrooklyn);
+bodyManhattan.addEventListener("mouseover", mouseOverManhattan);
+bodyManhattan.addEventListener("mouseout", mouseOutManhattan);
+bodyQueens.addEventListener("mouseover", mouseOverQueens);
+bodyQueens.addEventListener("mouseout", mouseOutQueens);
 
-// body.addEventListener("mouseover", mouseOverAvatar);
-// body.addEventListener("mouseout", mouseOutAvatar);
-// leg.addEventListener("mouseover", mouseOverAvatar);
-// leg.addEventListener("mouseout", mouseOutAvatar);
-// eye.addEventListener("mouseover", mouseOverAvatar);
-// eye.addEventListener("mouseout", mouseOutAvatar);
+function mouseOverBrooklyn(event) {
+  let currentRentalInventoryData = getCurrentRentalInventoryData("Brooklyn");
+  weightBrooklyn.style.top = event.clientY + 1 + 'px' ;
+  weightBrooklyn.style.left = event.clientX + 1 + 'px';
+  weightBrooklyn.classList.add('show');
+  const weightBrooklynText = weightBrooklyn.querySelector('p');
+  weightBrooklynText.innerText = "Weight of Brooklyn:"+currentRentalInventoryData;
+}
 
-// function mouseOverAvatar(event) {
-//   let currentRentalInventoryData = getCurrentRentalInventoryData();
-//   weight.style.top = event.clientY + 1 + 'px' ;
-//   weight.style.left = event.clientX + 1 + 'px';
-//   weight.classList.add('show');
-//   const weightText = weight.querySelector('p');
-//   weightText.innerText = "Weight:"+currentRentalInventoryData;
-// }
+function mouseOutBrooklyn() {
+    weightBrooklyn.classList.remove('show');
+}
 
-// function mouseOutAvatar() {
-//     weight.classList.remove('show');
-// }
+function mouseOverManhattan(event) {
+  let currentRentalInventoryData = getCurrentRentalInventoryData("Manhattan");
+  weightManhattan.style.top = event.clientY + 1 + 'px' ;
+  weightManhattan.style.left = event.clientX + 1 + 'px';
+  weightManhattan.classList.add('show');
+  const weightManhattanText = weightManhattan.querySelector('p');
+  weightManhattanText.innerText = "Weight of Manhattan:"+currentRentalInventoryData;
+}
+
+function mouseOutManhattan() {
+    weightManhattan.classList.remove('show');
+}
+
+function mouseOverQueens(event) {
+  let currentRentalInventoryData = getCurrentRentalInventoryData("Queens");
+  weightQueens.style.top = event.clientY + 1 + 'px' ;
+  weightQueens.style.left = event.clientX + 1 + 'px';
+  weightQueens.classList.add('show');
+  const weightQueensText = weightQueens.querySelector('p');
+  weightQueensText.innerText = "Weight of Queens:"+currentRentalInventoryData;
+}
+
+function mouseOutQueens() {
+    weightQueens.classList.remove('show');
+}
 
 //code to control the avatar size;
 function avatarBrooklyn(currentWeightDataBrooklyn){
