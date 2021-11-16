@@ -97,7 +97,7 @@
     opacity: 1;
 }
 
-#queens-body path{
+#queens {
     transform-origin: 50% 50%;
   transform-box: fill-box;
 }

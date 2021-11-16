@@ -598,5 +598,5 @@ function avatar(currentWeightData){
   console.log("Weight:"+currentWeightData);
   let avatarBody =document.querySelector('#brooklyn-body .st30');
   //avatarBody.style.width=currentWeightData+'px';
-  avatarBody.style.transform='scaleX('+currentWeightData/10000+')';
+  avatarBody.style.transform='scaleX('+currentWeightData/6000+')';
 }
