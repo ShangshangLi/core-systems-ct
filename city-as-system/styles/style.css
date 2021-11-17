@@ -1,8 +1,21 @@
 #door:hover path{
-    fill:lightgray;
+    fill: #e6e6e6;
 }
-#door path{
+#door path {
     transition: fill 0.3s ease-in-out;
+}
+
+#door:hover circle{
+    fill: #4fbdc9;
+}
+#door circle {
+    transition: fill 0.3s ease-in-out;
+}
+
+.cls-8{
+    font-family: futura-pt;
+    font-size:1.8vw;
+    font-weight:bold;
 }
 
 a{
