@@ -55,11 +55,15 @@ function changeMonthRight(amount){
 }
 
 document.getElementById("month-right").onclick = function(){
-  changeMonthRight(1);
-  let currentIncomeData = getCurrentRentalIndexData();
-  furniture(currentIncomeData);
-  let currentWeightData = getCurrentRentalInventoryData();
-  avatar(currentWeightData);
+  if(currentMonth==8 && currentYear==2021){
+    console.log("the end");
+  }else{
+    changeMonthRight(1);
+    let currentIncomeData = getCurrentRentalIndexData();
+    furniture(currentIncomeData);
+    let currentWeightData = getCurrentRentalInventoryData();
+    avatar(currentWeightData);
+  }
 }
 
 function changeMonthLeft(amount){
