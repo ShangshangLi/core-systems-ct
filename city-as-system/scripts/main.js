@@ -5,8 +5,8 @@
 // console.log(doorX);
 // door.style.opacity = '0'; 
 
-const esc = document.querySelector("#esc");
-const escCircle = document.querySelector("#esc-circle");
+// const esc = document.querySelector("#esc .button2");
+// const escCircle = document.querySelector("#esc-circle .button1");
 
 // esc.addEventListener("mouseover", mouseOverESC);
 // esc.addEventListener("mouseout", mouseOutESC);
@@ -15,13 +15,13 @@ const escCircle = document.querySelector("#esc-circle");
 
 // function mouseOverESC() {
 //     esc.style.fill = "white";
-//     escCircle.style.fill="#58c1cc";
-//     console.log("get");
+//     esc.style.shadow="1px 1px 1px 1px black";
+//     // escCircle.style.fill="#58c1cc";
 // }
 
 // function mouseOutESC() {
 //     esc.style.fill = "#58c1cc";
-//     escCircle.style.fill = "white";
+//     // escCircle.style.fill = "white";
 // }
 
 document.getElementById("esc-button").addEventListener('click', function(){

@@ -100,3 +100,7 @@
     font-family: futura-pt;
     font-size:30px;
 }
+
+#esc .button2:hover{
+    text-shadow: 2px 2px 2px lightgray;
+}
