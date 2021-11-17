@@ -17,3 +17,13 @@ h1{
 p{
     font-family: futura-pt;
 }
+
+#esc .button2{
+    fill:#58c1cc;
+    font-family: futura-pt;
+    font-size:30px;
+}
+
+#esc .button2:hover{
+    text-shadow: 2px 2px 2px lightgray;
+}
