@@ -44,6 +44,7 @@ h2{
     margin-left:3.2vw;
     font-family: futura-pt;
     position: relative;
+    width:fit-content;
 }
 
 p{
@@ -89,4 +90,18 @@ p{
 
 #hint-info.show {
     opacity: 1;
+}
+
+/* the page transition credit to sayantanm19 (https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/) */
+body {
+    animation: fadeInAnimation ease 1s;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+     }
 }
