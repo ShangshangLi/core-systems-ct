@@ -5,13 +5,32 @@
     transition: fill 0.3s ease-in-out;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1{
-    color: white;
-    text-shadow: #ff7bac 2px 2px;
-    margin-top: -50%;
+    font-size:4vw;
+    color: #58c1cc;
+    text-shadow: white 5px 5px;
+    margin-top: -55%;
+    margin-left:3vw;
     font-family: futura-pt;
     position: relative;
-    text-align: center;
+}
+
+h2:hover{
+    color:pink;
+}
+
+h2{
+    font-size:2vw;
+    color: #58c1cc;
+    text-shadow: white 4px 4px;
+    margin-top: -2%;
+    margin-left:3.2vw;
+    font-family: futura-pt;
+    position: relative;
 }
 
 p{
@@ -26,4 +45,35 @@ p{
 
 #esc .button2:hover{
     text-shadow: 2px 2px 2px lightgray;
+}
+
+#hint .button2{
+    fill:#58c1cc;
+    font-family: futura-pt;
+    font-size:32px;
+}
+
+#hint .button2:hover{
+    text-shadow: 2px 2px 2px lightgray;
+}
+
+#hint-info {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#hint-info p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#hint-info.show {
+    opacity: 1;
 }

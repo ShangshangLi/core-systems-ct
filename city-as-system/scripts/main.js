@@ -12,3 +12,22 @@ document.getElementById("esc-button").addEventListener('click', function(){
     escCircle.style.fill='#58c1cc';
     console.log("get")
 })
+
+//code for hint;
+const hintInfo = document.querySelector('#hint-info');
+
+const hintButton = document.querySelector('#hint-button');
+hintButton.addEventListener("mouseover", mouseOverHint);
+hintButton.addEventListener("mouseout", mouseOutHint);
+
+function mouseOverHint(event) {
+    hintInfo.style.top = event.clientY + 1 + 'px' ;
+    hintInfo.style.left = event.clientX + 1 + 'px';
+    hintInfo.classList.add('show');
+    const hintText = hintInfo.querySelector('p');
+    hintText.innerText = "Weight = Rental Inventory\nIncome = Rental Index\nBudget = Median Asking Rent\nPress on month or year to change data.\nAll the data comes from StreetEasy.";
+}
+
+function mouseOutHint() {
+    hintInfo.classList.remove('show');
+}
