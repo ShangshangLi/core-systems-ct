@@ -5,9 +5,8 @@
 // console.log(doorX);
 // door.style.opacity = '0'; 
 
-// const esc = document.querySelector("#esc");
-// const escCircle = document.querySelector("#esc-circle");
-// const budget = document.querySelector('#budget');
+const esc = document.querySelector("#esc");
+const escCircle = document.querySelector("#esc-circle");
 
 // esc.addEventListener("mouseover", mouseOverESC);
 // esc.addEventListener("mouseout", mouseOutESC);
@@ -15,23 +14,20 @@
 // escCircle.addEventListener("mouseout", mouseOutESC);
 
 // function mouseOverESC() {
-//     esc.style.fill = "#ff0000";
-//     escCircle.fill="black";
-//     // esc.style.width="500px";
+//     esc.style.fill = "white";
+//     escCircle.style.fill="#58c1cc";
 //     console.log("get");
-// //   budget.style.top = event.clientY + 1 + 'px' ;
-// //   budget.style.left = event.clientX + 1 + 'px';
-// //   budget.classList.add('show');
-// //   const budgetText = budget.querySelector('p');
-// //   budgetText.innerText = "Budget:"+currentData;
 // }
 
 // function mouseOutESC() {
-//     // budget.classList.remove('show');
-    
+//     esc.style.fill = "#58c1cc";
+//     escCircle.style.fill = "white";
 // }
 
-document.getElementById("esc-button").onclick = function(){
-    esc.style.fill='yellow';
+document.getElementById("esc-button").addEventListener('click', function(){
+    let esc =document.querySelector('#esc .button2');
+    esc.style.fill='white';
+    let escCircle =document.querySelector('#esc-circle .button1');
+    escCircle.style.fill='#58c1cc';
     console.log("get")
-  }
+})

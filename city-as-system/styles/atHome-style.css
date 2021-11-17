@@ -94,3 +94,9 @@
     transform-origin: 50% 50%;
     transform-box: fill-box;
 }
+
+#esc .button2{
+    fill:#58c1cc;
+    font-family: futura-pt;
+    font-size:30px;
+}
