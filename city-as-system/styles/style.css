@@ -1,3 +1,24 @@
+#explain {
+    opacity: 0;
+    pointer-events:none;
+    position: absolute;
+    padding: 10px;
+    background: pink;
+    border-radius: 5%;
+    transition: opacity .3s ease-in-out;
+    box-shadow: palevioletred 3px 3px;
+}
+
+#explain p {
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+#explain.show {
+    opacity: 1;
+}
+
 #door:hover path{
     fill: #e6e6e6;
 }
@@ -23,6 +44,7 @@ a{
 }
 
 h1{
+    width: fit-content;
     font-size:4vw;
     color: #58c1cc;
     text-shadow: white 5px 5px;
